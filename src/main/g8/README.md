@@ -14,7 +14,7 @@ Run the following command to start services locally:
     sudo mongod
     sm --start PAYMENTS_DIRECT_DEBIT -f
 
-Then execute the test:
+Then execute the Cucumber tests:
     
     sbt clean test
 

@@ -10,7 +10,7 @@ object ScenarioContext {
   def get[T: Manifest](key: String): T =
     scenarioValues
       .get(key)
-      .fold(throw new Exception(s"Key $key not found in scenario context"))(_.asInstanceOf[T])
+      .fold(throw new Exception(s"Key \$key not found in scenario context"))(_.asInstanceOf[T])
 
   def reset() {
     scenarioValues.foreach(x => scenarioValues - x._1)

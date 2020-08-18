@@ -10,7 +10,7 @@ class ExampleService(client: HttpClient) {
   val host: String = TestConfiguration.url("des")
 
   def getInformation(regime: String, idType: String, id: String): ServiceResponse = {
-    val url = s"$host/cross-regime/customer/$regime/$idType/$id/information"
+    val url = s"\$host/cross-regime/customer/\$regime/\$idType/\$id/information"
     def envHeader(env: String): (String, String) = ("Environment", env)
     Await.result(client.GET(url, ("Authorization", "Bearer EvYRlYH8AS_hZGw32ffqJ25Mz04a"), envHeader("ist0")), 10.seconds)
   }
