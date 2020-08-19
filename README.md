@@ -5,8 +5,8 @@ This repository can be used by teams who are in need of an API test suite that v
 
 The ui-test-template.g8 is developed and tested using:
 * Java 1.8
-* Scala 2.11.7
-* sbt 0.13.16
+* Scala 2.12.11
+* sbt 1.3.12
 * giter8 0.11.0-M3
 
 It supports API testing using Cucumber as the test execution framework.
