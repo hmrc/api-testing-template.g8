@@ -1,15 +1,15 @@
 
 # api-testing-template
 
-This repository can be used by teams who are in need of an API test suite that verifies interactions between multiple backend services. 
+This repository can be used by teams who are in need of an API test suite that verifies requests within a backend service. 
 
 The ui-test-template.g8 is developed and tested using:
 * Java 1.8
-* Scala 2.11.7
-* sbt 0.13.16
+* Scala 2.12.11
+* sbt 1.3.12
 * giter8 0.11.0-M3
 
-It supports API testing using Cucumber as the test execution frameworks.
+It supports API testing using Cucumber as the test execution framework.
 
 ## Support
 This repository is supported by HMRC Digital's Test Community.  If you have a query or find an issue please drop in to the #community-testing channel in Slack.
@@ -21,7 +21,7 @@ If you'd like to contribute we welcome you to raise a PR or issue against the pr
 You **DO NOT** need to clone this project to generate an API Test project from the template.  You simply need to have giter8 installed, and run the `g8` command below.
 
 ### [Install giter8 CLI](#install-giterate) 
-You will need to have giter8 installed in order to generate a test suite from api-testing-template. Due to some limitations with the SBT giter8 plugin, unfortunately this template will not generate successfully. 
+You will need to have giter8 installed in order to generate a test suite from the api-testing-template. Due to some limitations with the SBT giter8 plugin, unfortunately this template will not generate successfully. 
 
 Instructions to install giter8 can be found [here](http://www.foundweekends.org/giter8/setup.html).
 
@@ -33,7 +33,7 @@ To generate a test suite, execute the following command in the parent directory 
 This will prompt you for:
 - **name** -> The name of the api test repository.  I.e. my-digital-service-api-tests
 
-To execute the example test, follow the steps in the project README.md
+To execute the example tests, follow the steps in the project README.md
 
 ### A Note on the Example Feature file
 The example tests created by this template are quite limited in what they do. They make some simple requests to some endpoints to show how to quickly get up and running using the api testing template. These tests depend on the services in the `PAYMENTS_DIRECT_DEBIT` being available:
