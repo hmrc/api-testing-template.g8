@@ -3,7 +3,7 @@
 
 This repository can be used by teams who are in need of an API test suite that verifies requests within a backend service. 
 
-The ui-test-template.g8 is developed and tested using:
+The api-testing-template.g8 is developed and tested using:
 * Java 1.8
 * Scala 2.12.11
 * sbt 1.3.12
