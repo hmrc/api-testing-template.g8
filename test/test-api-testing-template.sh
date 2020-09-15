@@ -12,17 +12,27 @@ start_mongo_container() {
 
 }
 
+initialize_repo() {
+  #The repo uses sbtAutoBuildPlugin which requires repository.yaml, licence.txt and an initial git local commit to compile
+  cp $WORKSPACE/api-testing-template.g8/repository.yaml .
+  cp $WORKSPACE/api-testing-template.g8/LICENSE .
+  git init
+  git add .
+  git commit -m "initial commit"
+}
+
 ## Services
 start_mongo_container
-sm --start PAYMENTS_DIRECT_DEBIT -f
+sm --start DIRECT_DEBIT_STUBS -r
 
 # Test 1 - local, cucumber
 g8 file://api-testing-template.g8/ --name=test-1
 cd test-1 || exit
+initialize_repo
 sbt clean test
 cd - || exit
 rm -rf test-1
 
 # TEAR DOWN
-sm --stop PAYMENTS_DIRECT_DEBIT
+sm --stop DIRECT_DEBIT_STUBS
 docker stop mongo
