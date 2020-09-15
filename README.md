@@ -36,33 +36,9 @@ This will prompt you for:
 To execute the example tests, follow the steps in the project README.md
 
 ### A Note on the Example Feature file
-The example tests created by this template are quite limited in what they do. They make some simple requests to some endpoints to show how to quickly get up and running using the api testing template. These tests depend on the services in the `PAYMENTS_DIRECT_DEBIT` being available:
-
-    ASSETS_FRONTEND
-    AUTH AUTH_LOGIN_API       
-    AUTH_LOGIN_STUB
-    BANK_ACCOUNT_REPUTATION_STUB
-    BAS_GATEWAY 
-    BAS_GATEWAY_FRONTEND 
-    CA_FRONTEND    
-    CONTACT_FRONTEND
-    DATASTREAM
-    DIRECT_DEBIT_BACKEND
-    DIRECT_DEBIT_FRONTEND
-    DIRECT_DEBIT_STUBS
-    EMAIL 
-    EMAIL_VERIFICATION 
-    EMAIL_VERIFICATION_FRONTEND 
-    EXTERNAL_PORTAL_STUB 
-    HMRCDESKPRO   
-    HMRC_EMAIL_RENDERER   
-    IDENTITY_VERIFICATION
-    MAILGUN_STUB
-    PAYMENTS_ADMIN_FRONTEND
-    PAYMENTS_STUBS
-    PAY_API
-    PAY_FRONTEND
-    USER_DETAILS
+The example tests provided in this template is quite limited in what they do. They make some simple requests to show 
+how to quickly set up and run tests using the api testing template. These tests depend on the service `DIRECT_DEBIT_STUBS` 
+being available.
 
 ## Development
 If you'd like to contribute to the api-testing-template you'll need to test your changes before raising a PR (see below).  
