@@ -8,6 +8,7 @@ The api-testing-template.g8 is developed and tested using:
 * Scala 2.12.11
 * sbt 1.3.12
 * giter8 0.11.0-M3
+* Scalafmt 2.7.1
 
 It supports API testing using Cucumber as the test execution framework.
 
@@ -36,7 +37,7 @@ This will prompt you for:
 To execute the example tests, follow the steps in the project README.md
 
 ### A Note on the Example Feature file
-The example tests provided in this template is quite limited in what they do. They make some simple requests to show 
+The example tests provided in this template are quite limited in what they do. They make some simple requests to show 
 how to quickly set up and run tests using the api testing template. These tests depend on the service `DIRECT_DEBIT_STUBS` 
 being available.
 
@@ -62,3 +63,8 @@ Copy `tests/test-api-testing-template.sh` to the parent directory of your local 
     ./test-api-testing-template.sh
 
 **Note:** At present these tests create different types of projects off the template, and run the API tests off those projects.  No assertions are made to ensure that the test ran and passed, you will have to consult the logs to ensure that the tests ran successfully.
+
+### Scalafmt
+The generated template has already been formatted using scalafmt as well as containing a `.scalafmt.conf` configuration and sbt scalafmt plugin reads for teams to use. 
+
+Currently formatting the files to include in a generated project is a manual task. This involves generating a new template from this project, formatting the generated files and then updating this repository to reflect the new formatting.
