@@ -32,7 +32,7 @@ To run the tests against an environment set the corresponding `host` environment
  To apply formatting to this repository using the configured rules in [.scalafmt.conf](.scalafmt.conf) execute:
  
  ```
- sbt scalafmtSbt scalafmtAll
+ sbt scalafmtAll
  ```
  
  To check files have been formatted as expected execute:
@@ -40,3 +40,5 @@ To run the tests against an environment set the corresponding `host` environment
  ```
  sbt scalafmtCheckAll scalafmtSbtCheck
  ```
+
+[Visit the official Scalafmt documentation to view a complete list of tasks which can be run.](https://scalameta.org/scalafmt/docs/installation.html#task-keys)
