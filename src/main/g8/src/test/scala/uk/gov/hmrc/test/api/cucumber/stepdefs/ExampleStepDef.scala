@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package uk.gov.hmrc.test.api.cucumber.stepdefs
 
 import uk.gov.hmrc.test.api.client.ServiceResponse
@@ -39,10 +40,10 @@ class ExampleStepDef extends BaseStepDef {
     response.body shouldBe Some(invalidVRNResponse)
   }
 
-  val validRegime = "VATC"
-  val validIdType = "VRN"
-  val validId = "919951000"
-  val invalidId = "<ID>"
+  val validRegime        = "VATC"
+  val validIdType        = "VRN"
+  val validId            = "919951000"
+  val invalidId          = "<ID>"
   val invalidVRNResponse = "VRN contained a non digit character: <ID>"
 
 }
