@@ -64,6 +64,18 @@ Copy `tests/test-api-testing-template.sh` to the parent directory of your local 
 
 **Note:** At present these tests create different types of projects off the template, and run the API tests off those projects.  No assertions are made to ensure that the test ran and passed, you will have to consult the logs to ensure that the tests ran successfully.
 
+#### Testing in CI
+The bash script [test-in-ci.sh](test-in-ci.sh) is used to test the api-testing-template.g8 template
+in a pipeline via a PR builder before merging changes to master. The script generates a new repository for the
+provided template type, and runs a smoke api test.
+
+```
+./test-in-ci.sh
+```
+
+This script can be also used to run locally on an engineer's machine, but it does not provide the necessary set up by default.
+Use [test-api-testing-template.sh](src/test/test-api-testing-template.sh) instead.
+
 ### Scalafmt
 The generated template has already been formatted using scalafmt as well as containing a `.scalafmt.conf` configuration and sbt scalafmt plugin ready for teams to use. 
 
