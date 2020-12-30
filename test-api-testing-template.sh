@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-# This script tests the api-testing-template.g8 in CI and local environment
+# This script tests the api-testing-template.g8 in both the CI and local environment
 #
 # Prerequisite:
 # The script expects the following to be installed already:
