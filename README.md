@@ -42,7 +42,7 @@ how to quickly set up and run tests using the api testing template. These tests 
 being available.
 
 ## Development
-If you'd like to contribute to the api-testing-template you'll need to test your changes before raising a PR (see below).  
+To contribute to the api-testing-template you'll need to test your changes locally before raising a PR (see below).
 
 ### Generating an API Test project from you local changes
 To create a test project from your local changes, execute the following command from the parent directory of your local copy of the template:
@@ -52,17 +52,17 @@ To create a test project from your local changes, execute the following command 
 This will create a new API test project in a folder named `my-test-project/`.  
  
 ### Running the api-testing-template.g8 tests
-There are test scripts (written in bash) in the `tests/` folder which can run API tests against the different test-environments.  To successfully run the tests you will need to satisfy the following pre-requisites: 
+A shell script is available to generate a repository from the template and run a smoke test 
+from the newly created repository. Steps to run this script are documented here:
+[./test-api-testing-template.sh](test-api-testing-template.sh)
 
-- [Install Giterate CLI](#install-giterate)
-- Install and configure [Service Manager](https://github.com/hmrc/service-manager) (see Confluence)
-- Install Mongo (see Confluence)
+**Note:** The script does not include any assertions to ensure that the tests are passing. You will have to consult the 
+output to ensure that the tests ran successfully.
 
-Copy `tests/test-api-testing-template.sh` to the parent directory of your local copy of the api-testing-template.g8 project.  Execute the script without params:
+#### Testing in CI
+In CI, [./test-api-testing-template.sh](test-api-testing-template.sh) is used to test the 
+performance-testing-template.g8 template in a pipeline via a PR builder before merging changes to master. 
 
-    ./test-api-testing-template.sh
-
-**Note:** At present these tests create different types of projects off the template, and run the API tests off those projects.  No assertions are made to ensure that the test ran and passed, you will have to consult the logs to ensure that the tests ran successfully.
 
 ### Scalafmt
 The generated template has already been formatted using scalafmt as well as containing a `.scalafmt.conf` configuration and sbt scalafmt plugin ready for teams to use. 
