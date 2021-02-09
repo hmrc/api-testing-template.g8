@@ -57,7 +57,7 @@ local_setup() {
   fi
 
   print "INFO: Starting SM profile"
-  sm --start DIRECT_DEBIT_STUBS -r
+  sm --start DIRECT_DEBIT_STUBS -r --wait 100
 }
 
 #Creates a sandbox folder to generate test repository
