@@ -12,7 +12,7 @@ Prior to executing the tests ensure you have:
 Run the following command to start services locally:
 
     sudo mongod
-    sm --start DIRECT_DEBIT_STUBS -r
+    sm --start DIRECT_DEBIT_STUBS -r --wait 100
 
 Then execute the Cucumber tests:
     
