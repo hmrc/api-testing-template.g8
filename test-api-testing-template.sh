@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-# This script tests the api-testing-template.g8 in both the CI and local environment
+# This script tests the api-testing-template-cucumber.g8 in both the CI and local environment
 #
 # Prerequisite:
 # The script expects the following to be installed already:
@@ -13,7 +13,7 @@
 #     - Starting and stopping the SM profile used by the template for testing.
 # - When the TEST_ENVIRONMENT is set to ci the local setup and teardown is ignored.
 # - Creates a sandbox folder under target
-# - Generates a template from api-testing-template.g8
+# - Generates a template from api-testing-template-cucumber.g8
 # - Runs the api smoke test against locally running services
 #
 # When does the test fail in CI?
@@ -40,7 +40,7 @@ print() {
 }
 
 if [[ "$TEST_ENVIRONMENT" == "ci" || "$TEST_ENVIRONMENT" == "local" ]]; then
-  print "INFO: Testing api-testing-template.g8 in $TEST_ENVIRONMENT"
+  print "INFO: Testing api-testing-template-cucumber.g8 in $TEST_ENVIRONMENT"
 else
   print "ERROR: TEST_ENVIRONMENT variable is required. Should be one of ci or local"
   exit 1
@@ -76,7 +76,7 @@ setup_sandbox() {
 }
 
 generate_repo_from_template() {
-  print "INFO: Using api-testing-template.g8 to generate new test repository: $REPO_NAME."
+  print "INFO: Using api-testing-template-cucumber.g8 to generate new test repository: $REPO_NAME."
   g8 file:///$TEMPLATE_DIRECTORY --name="$REPO_NAME"
 }
 
