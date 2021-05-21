@@ -1,3 +1,4 @@
+> :warning: **This template is not being actively maintained**: Instead, teams are encouraged to make use of the [ScalaTest template](https://github.com/hmrc/api-testing-template-scalatest.g8).
 
 # api-testing-template-cucumber
 
